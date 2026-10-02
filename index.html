@@ -1,12 +1,954 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prodily</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PRO DÍLY – Sdružení nezávislých kandidátů | Volby 2026</title>
+<meta name="description" content="Sdružení nezávislých kandidátů PRO DÍLY – volby do zastupitelstva obce Díly 9. a 10. října 2026. Náš program, kandidáti a co se nám už podařilo. Volte č. 1.">
+<meta name="theme-color" content="#14284b">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="PRO DÍLY – Zkusme to společně trochu jinak">
+<meta property="og:description" content="Sdružení nezávislých kandidátů PRO DÍLY. Volby do zastupitelstva obce Díly 9. a 10. října 2026 – volte č. 1.">
+<meta property="og:image" content="https://www.prodily.cz/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --white:#ffffff;
+  --tint:#eef3f9;
+  --tint-2:#e2eaf4;
+  --ink:#14233b;
+  --ink-2:#44526a;
+  --muted:#6b778a;
+  --line:#dde5ef;
+  --navy:#14284b;
+  --navy-2:#0c1a33;
+  --navy-ink:#c5d2e6;
+  --gold:#c1913a;
+  --gold-ink:#8a5f16;
+  --gold-bright:#e3b45c;
+  --gold-soft:#f6ecd8;
+  --radius:16px;
+  --shadow:0 1px 2px rgba(20,40,75,.06),0 10px 28px -12px rgba(20,40,75,.18);
+  --shadow-lg:0 2px 4px rgba(20,40,75,.06),0 28px 56px -20px rgba(20,40,75,.35);
+  --display:"Montserrat",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --maxw:1180px;
+  --gutter:24px;
+  --header-h:76px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font:400 17px/1.7 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.12;letter-spacing:-.02em;margin:0;color:var(--navy);text-wrap:balance}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+strong{font-weight:600;color:var(--ink)}
+svg.i{width:24px;height:24px;flex:none;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--gutter)}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--navy);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+.skip:focus{top:12px}
+:focus-visible{outline:3px solid var(--gold-bright);outline-offset:3px;border-radius:4px}
+section[id]{scroll-margin-top:var(--header-h)}
+
+/* Štítek nad nadpisem */
+.eyebrow{display:inline-block;font:700 12.5px/1.3 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink)}
+.eyebrow .sep{color:var(--gold);margin:0 .45em}
+
+/* ---------- Horní lišta ---------- */
+.topbar{background:var(--navy-2);color:var(--navy-ink);font-size:13.5px}
+.topbar .container{display:flex;align-items:center;justify-content:center;gap:6px 16px;flex-wrap:wrap;min-height:38px;padding-top:6px;padding-bottom:6px;text-align:center}
+.topbar strong{color:#fff}
+.countdown{display:inline-flex;align-items:center;gap:8px;color:var(--gold-bright);font-weight:600}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--gold-bright);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(227,180,92,.55)}70%{box-shadow:0 0 0 8px rgba(227,180,92,0)}100%{box-shadow:0 0 0 0 rgba(227,180,92,0)}}
+
+/* ---------- Hlavička ---------- */
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line);transition:box-shadow .2s}
+.header.scrolled{box-shadow:0 8px 24px -14px rgba(20,40,75,.35)}
+.header .container{display:flex;align-items:center;justify-content:space-between;height:var(--header-h);gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.brand img{width:48px;height:auto}
+.brand-text{display:flex;flex-direction:column;line-height:1.05;min-width:0}
+.brand-name{font:800 23px/1 var(--display);letter-spacing:.01em;color:var(--navy)}
+.brand-sub{font:600 11.5px/1.2 var(--display);letter-spacing:.04em;color:var(--gold-ink);margin-top:4px;white-space:nowrap}
+.nav{display:none}
+.nav a{text-decoration:none;font:700 12.5px/1 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--navy);padding:10px 12px;border-radius:6px;position:relative;transition:color .15s}
+.nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:2px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .2s}
+.nav a:hover::after,.nav a.active::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 14px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-radius:8px;padding:17px 26px;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s,border-color .15s,color .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-1px)}
+.btn .i{width:18px;height:18px;stroke-width:2.2}
+.btn-gold{background:var(--gold-bright);color:var(--navy-2)}
+.btn-gold:hover{background:#ecc373}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:#1c3764}
+.btn-outline-light{border-color:rgba(255,255,255,.45);color:#fff}
+.btn-outline-light:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.btn-sm{padding:12px 18px;font-size:12.5px}
+.header-cta{display:none}
+.menu-btn{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--navy);cursor:pointer}
+.menu-btn .i-close{display:none}
+.menu-open .menu-btn .i-open{display:none}
+.menu-open .menu-btn .i-close{display:block}
+.mobile-nav{display:none;position:fixed;left:0;right:0;top:var(--header-h);background:#fff;border-bottom:1px solid var(--line);box-shadow:0 24px 40px -24px rgba(20,40,75,.45);padding:8px var(--gutter) 22px;z-index:49;max-height:calc(100vh - var(--header-h));overflow:auto}
+.menu-open .mobile-nav{display:block}
+.mobile-nav a{display:flex;align-items:center;justify-content:space-between;padding:15px 2px;border-bottom:1px solid var(--tint-2);text-decoration:none;font:700 14px/1.2 var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--navy)}
+.mobile-nav a .i{width:18px;height:18px;color:var(--gold)}
+.mobile-nav .btn{width:100%;margin-top:18px;border-bottom:0;justify-content:center;color:var(--navy-2)}
+@media (min-width:1080px){
+  .nav{display:flex;gap:2px}
+  .header-cta{display:inline-flex}
+  .menu-btn,.mobile-nav{display:none!important}
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:var(--navy);color:#fff;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(700px 500px at 0% 100%,rgba(227,180,92,.16),transparent 60%),radial-gradient(600px 400px at 30% 0%,rgba(255,255,255,.06),transparent 60%)}
+.hero-photo{position:relative;aspect-ratio:1600/1038;background:#1c3257}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.hero-photo::after{content:"";position:absolute;inset:auto 0 0 0;height:28%;background:linear-gradient(0deg,var(--navy),rgba(20,40,75,0))}
+.hero-text{padding:8px var(--gutter) 48px;position:relative}
+.hero .eyebrow{color:var(--gold-bright)}
+.hero h1{color:#fff;font-weight:800;font-size:clamp(36px,8.6vw,64px);line-height:1.05;letter-spacing:-.025em;margin:16px 0 20px}
+.hero h1 .accent{color:var(--gold-bright)}
+.hero .lead{font-size:clamp(17px,2vw,19px);color:var(--navy-ink);max-width:34em;margin-bottom:0}
+.hero .lead strong{color:#fff}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 30px}
+.hero-dates{display:flex;flex-wrap:wrap;gap:10px}
+.date-chip{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:11px 16px 11px 13px}
+.date-chip .i{color:var(--gold-bright);width:22px;height:22px}
+.date-chip b{display:block;font:700 14.5px/1.25 var(--display);color:#fff}
+.date-chip span{display:block;font-size:13.5px;color:var(--navy-ink);line-height:1.35}
+.stamp{position:absolute;right:14px;top:14px;width:104px;height:104px;z-index:2;filter:drop-shadow(0 10px 18px rgba(0,0,0,.35))}
+.stamp .ring{transform-origin:100px 100px;animation:spin 36s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (min-width:640px){.stamp{width:132px;height:132px;right:24px;top:24px}}
+@media (min-width:1100px){
+  .hero-grid{display:grid;grid-template-columns:minmax(0,42fr) minmax(0,58fr);min-height:600px}
+  .hero-text{align-self:center;padding:72px 48px 80px max(var(--gutter),calc((100vw - var(--maxw))/2 + var(--gutter)))}
+  .hero-photo{aspect-ratio:auto;height:100%;order:2}
+  .hero-photo::after{inset:0 auto 0 0;width:14%;height:auto;background:linear-gradient(90deg,var(--navy),rgba(20,40,75,0))}
+  .stamp{width:150px;height:150px;right:32px;top:32px}
+}
+
+/* ---------- Pás s fakty ---------- */
+.facts{background:var(--tint);border-bottom:1px solid var(--line)}
+.facts-grid{display:grid;grid-template-columns:1fr 1fr;list-style:none;margin:0 auto;padding:0}
+.facts-grid li{padding:22px 12px;text-align:center;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts-grid li:nth-child(2n){border-right:0}
+.facts-grid li:nth-child(n+3){border-bottom:0}
+.facts-grid b{display:block;font:800 clamp(22px,3.4vw,30px)/1.1 var(--display);color:var(--navy);letter-spacing:-.02em}
+.facts-grid span{display:block;font:600 12px/1.35 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink);margin-top:8px}
+@media (min-width:860px){
+  .facts-grid{grid-template-columns:repeat(4,1fr)}
+  .facts-grid li{border-bottom:0;padding:30px 16px}
+  .facts-grid li:nth-child(2n){border-right:1px solid var(--line)}
+  .facts-grid li:last-child{border-right:0}
+}
+
+/* ---------- Sekce ---------- */
+.section{padding:72px 0}
+.section.tint{background:var(--tint)}
+.section h2{font-size:clamp(30px,4.8vw,46px);margin-top:14px}
+.split-head{display:grid;gap:18px 64px;margin-bottom:44px}
+.split-head .lead-r{font:500 clamp(19px,2.3vw,23px)/1.5 var(--sans);color:var(--navy);margin:0}
+.center-head{text-align:center;max-width:760px;margin:0 auto 44px}
+.center-head p{font-size:18px;color:var(--ink-2);margin-top:16px}
+@media (min-width:900px){
+  .section{padding:104px 0}
+  .split-head{grid-template-columns:1fr 1fr;align-items:end;margin-bottom:56px}
+}
+
+/* ---------- Úvodní slovo ---------- */
+.cols{display:grid;gap:0 56px;color:var(--ink-2)}
+@media (min-width:900px){.cols{grid-template-columns:1fr 1fr}}
+.pullquote{display:flex;gap:18px;margin:56px auto 0;max-width:920px;padding:0}
+.pullquote .mark{font:800 84px/.8 var(--display);color:var(--gold);flex:none;margin-top:4px}
+.pullquote p{font:500 clamp(22px,3vw,31px)/1.38 var(--display);letter-spacing:-.015em;color:var(--navy);margin:0}
+.pullquote p b{font-weight:800}
+.pullquote p .accent{color:var(--gold-ink)}
+.pullquote footer{margin-top:16px;font:600 13px/1.4 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- Hodnoty ---------- */
+.values-grid{display:grid;gap:40px;align-items:center}
+.logo-card{max-width:360px;width:100%;margin:0 auto;background:#fff;border-radius:22px;padding:20px;box-shadow:var(--shadow-lg)}
+.logo-card img{width:100%;border-radius:12px}
+.values{list-style:none;margin:34px 0 0;padding:0;display:grid;gap:14px}
+.value{display:flex;gap:16px;align-items:flex-start;background:#fff;border-radius:12px;padding:18px 20px;border:1px solid var(--line)}
+.value .num{font:800 12.5px/1 var(--display);letter-spacing:.08em;color:var(--gold-ink);padding-top:6px;min-width:22px}
+.value h3{font-size:17px;letter-spacing:-.01em;margin-bottom:4px}
+.value p{font-size:15.5px;color:var(--ink-2);line-height:1.55}
+.value .i{margin-left:auto;color:var(--gold);width:26px;height:26px;margin-top:2px}
+@media (min-width:640px){.values{grid-template-columns:1fr 1fr}.values li:last-child{grid-column:1/-1}}
+@media (min-width:1000px){.values-grid{grid-template-columns:.75fr 1.25fr;gap:72px}}
+
+/* ---------- Program ---------- */
+.program-grid{display:grid;gap:16px}
+.goal{position:relative;display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.goal:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#cbd7e6}
+.goal-icon{display:grid;place-items:center;width:54px;height:54px;border-radius:14px;background:var(--tint);color:var(--navy);flex:none}
+.goal-icon .i{width:27px;height:27px}
+.goal .num{display:block;font:800 12px/1 var(--display);letter-spacing:.12em;color:var(--gold-ink);margin-bottom:8px}
+.goal h3{font-size:19px;letter-spacing:-.01em;margin-bottom:8px}
+.goal p{font-size:16px;color:var(--ink-2);line-height:1.62}
+@media (min-width:760px){.program-grid{grid-template-columns:1fr 1fr;gap:18px}.goal{padding:28px}}
+
+.assure{margin-top:32px;display:grid;gap:18px;align-items:center;background:var(--navy);color:#fff;border-radius:18px;padding:30px 26px;position:relative;overflow:hidden;isolation:isolate}
+.assure::after{content:"";position:absolute;right:-90px;bottom:-110px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(227,180,92,.28),transparent 70%);z-index:-1}
+.assure-icon{display:grid;place-items:center;width:62px;height:62px;border-radius:16px;background:rgba(227,180,92,.15);color:var(--gold-bright)}
+.assure-icon .i{width:30px;height:30px}
+.assure .eyebrow{color:var(--gold-bright)}
+.assure h3{color:#fff;font-size:clamp(21px,2.8vw,27px);margin:8px 0 10px}
+.assure p{color:var(--navy-ink)}
+@media (min-width:760px){.assure{grid-template-columns:auto 1fr;padding:40px 44px;gap:32px}}
+
+/* ---------- Kaplička ---------- */
+.chapel-grid{display:grid;gap:44px;align-items:center}
+.chapel-art{position:relative;max-width:420px;width:100%;margin:0 auto}
+.chapel-art .frame{background:#fff;border-radius:18px;padding:16px;box-shadow:var(--shadow-lg)}
+.chapel-art img{border-radius:10px;width:100%}
+.badge80{position:absolute;right:-10px;bottom:-18px;display:grid;place-items:center;text-align:center;width:112px;height:112px;border-radius:50%;background:var(--gold-bright);color:var(--navy-2);box-shadow:var(--shadow);border:4px solid #fff}
+.badge80 b{display:block;font:800 36px/1 var(--display)}
+.badge80 span{display:block;font:700 11px/1.2 var(--display);letter-spacing:.06em;text-transform:uppercase}
+.chapel .text p{color:var(--ink-2);font-size:18px}
+.fact-row{display:flex;flex-wrap:wrap;gap:20px 40px;margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+.fact b{display:block;font:800 30px/1 var(--display);color:var(--navy);letter-spacing:-.02em}
+.fact span{display:block;font:600 12px/1.4 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink);margin-top:8px}
+@media (min-width:960px){.chapel-grid{grid-template-columns:.85fr 1.15fr;gap:88px}.badge80{right:-34px;bottom:-30px;width:132px;height:132px}.badge80 b{font-size:42px}}
+
+/* ---------- Co se podařilo ---------- */
+.results{background:var(--navy);color:#fff;position:relative;overflow:hidden;isolation:isolate}
+.results::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(800px 420px at 100% 0,rgba(227,180,92,.14),transparent 60%),radial-gradient(600px 400px at 0 100%,rgba(255,255,255,.05),transparent 60%)}
+.results h2{color:#fff}
+.results .eyebrow{color:var(--gold-bright)}
+.results .split-head .lead-r{color:var(--navy-ink)}
+.stat-panel{display:grid;gap:30px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:28px;margin-bottom:20px}
+.stat-hero b{display:block;font:800 clamp(56px,9vw,84px)/1 var(--display);color:var(--gold-bright);letter-spacing:-.03em}
+.stat-hero span{display:block;margin-top:12px;color:var(--navy-ink);font-size:16.5px;max-width:22em}
+.bars{display:grid;gap:14px;align-content:center}
+.bars-title{font:700 13px/1.3 var(--display);letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:6px}
+.bar-row{display:grid;grid-template-columns:62px 1fr 48px;align-items:center;gap:12px;font-size:15px}
+.bar-row .lbl{color:var(--navy-ink)}
+.bar-row .val{color:#fff;font:700 16px/1 var(--display)}
+.bar-track{height:14px}
+.bar-fill{height:100%;width:0;background:var(--gold-bright);border-radius:0 4px 4px 0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.bars.shown .bar-fill{width:var(--w)}
+html:not(.js) .bar-fill{width:var(--w)}
+.bars-note{font-size:13px;color:var(--navy-ink);opacity:.85;margin-top:2px}
+@media (min-width:860px){.stat-panel{grid-template-columns:.8fr 1.2fr;padding:40px 44px;gap:56px;align-items:center}}
+.results-grid{display:grid;gap:16px}
+.result{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px;transition:background .2s,border-color .2s}
+.result:hover{background:rgba(255,255,255,.07);border-color:rgba(227,180,92,.45)}
+.result-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.result-icon{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;background:rgba(227,180,92,.14);color:var(--gold-bright)}
+.result h3{font-size:18px;color:#fff;letter-spacing:-.01em}
+.result p{color:var(--navy-ink);font-size:16px;line-height:1.62}
+@media (min-width:700px){.results-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1060px){.results-grid{grid-template-columns:repeat(3,1fr);gap:18px}}
+
+/* ---------- Kandidáti ---------- */
+.team-grid{display:grid;gap:36px;align-items:center;margin-bottom:48px}
+.team-grid figure{margin:0}
+.team-photo{border-radius:18px;overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:1200/1020;background:var(--tint)}
+.team-photo img{width:100%;height:100%;object-fit:cover}
+.team-grid figcaption{font-size:14px;color:var(--muted);margin-top:14px;display:flex;gap:8px;align-items:center}
+.team-grid figcaption .i{width:16px;height:16px;color:var(--gold)}
+.team-grid .text p{font-size:18px;color:var(--ink-2)}
+.team-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}
+.team-fact{background:var(--tint);border-radius:12px;padding:18px 10px;text-align:center}
+.team-fact b{display:block;font:800 30px/1 var(--display);color:var(--navy);letter-spacing:-.02em}
+.team-fact span{display:block;font:600 11.5px/1.35 var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--gold-ink);margin-top:8px}
+@media (min-width:980px){.team-grid{grid-template-columns:1.1fr .9fr;gap:72px}}
+
+.candidates{display:grid;gap:14px;list-style:none;margin:0;padding:0}
+.cand{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px 20px;transition:transform .2s,box-shadow .2s,border-color .2s}
+.cand:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#cbd7e6}
+.cand::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--tint-2);transition:background .2s}
+.cand:hover::before,.cand:first-child::before{background:var(--gold)}
+.cand .pos{font:800 12px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink)}
+.cand h3{font-size:20px;margin:10px 0 6px;letter-spacing:-.015em;padding-right:44px}
+.cand .role{font-size:15.5px;color:var(--ink-2);line-height:1.45}
+.cand .tag{display:inline-block;margin-top:12px;font-size:12.5px;color:var(--muted);background:var(--tint);border-radius:999px;padding:4px 10px}
+.cand .big{position:absolute;right:16px;top:8px;font:800 64px/1 var(--display);color:var(--tint);letter-spacing:-.04em;pointer-events:none;transition:color .2s}
+.cand:hover .big{color:var(--gold-soft)}
+@media (min-width:640px){.candidates{grid-template-columns:1fr 1fr}}
+@media (min-width:1000px){.candidates{grid-template-columns:repeat(3,1fr);gap:18px}}
+
+/* ---------- Prohlášení ---------- */
+.statement-card{position:relative;max-width:900px;margin:0 auto;background:#fff;border-radius:20px;padding:36px 24px;box-shadow:var(--shadow);overflow:hidden}
+.statement-card::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--navy) 0 60%,var(--gold) 60% 100%)}
+.statement-card .kicker{font:800 13px/1 var(--display);letter-spacing:.42em;text-transform:uppercase;color:var(--gold-ink);text-align:center;padding-left:.42em}
+.statement-card h2{text-align:center;font-size:clamp(25px,3.8vw,36px);margin:16px 0 8px}
+.statement-card .sub{text-align:center;color:var(--muted);margin-bottom:30px;font-size:15px}
+.statement-card p{color:var(--ink-2)}
+.statement-card .salute{font:600 19px/1.4 var(--display);color:var(--navy)}
+.statement-sign{margin-top:30px;padding-top:24px;border-top:1px solid var(--line);font-size:15px;color:var(--muted)}
+.statement-sign b{display:block;color:var(--navy);font-family:var(--display);margin-bottom:6px}
+@media (min-width:760px){.statement-card{padding:56px 72px}}
+
+/* ---------- Jak volit ---------- */
+.vote-grid{display:grid;gap:48px;align-items:center}
+.vote-grid .text>p{font-size:18px;color:var(--ink-2)}
+.steps{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:12px}
+.step{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.step-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:10px;background:var(--navy);color:var(--gold-bright);flex:none}
+.step-icon .i{width:22px;height:22px}
+.step b{display:block;font:700 16.5px/1.3 var(--display);color:var(--navy);margin-bottom:4px}
+.step span{display:block;color:var(--ink-2);font-size:15.5px;line-height:1.5}
+.ballot-wrap{padding:6px 0 34px}
+.ballot{position:relative;max-width:440px;margin:0 auto;width:100%;background:#fffef9;border-radius:8px;padding:26px 24px 28px;box-shadow:var(--shadow-lg);border:1px solid #ece6d8;transform:rotate(1.2deg)}
+.ballot::after{content:"";position:absolute;inset:8px;border:1px solid #efe7d6;border-radius:4px;pointer-events:none}
+.ballot-head{text-align:center;border-bottom:1.5px solid var(--ink);padding-bottom:12px;margin-bottom:16px}
+.ballot-head b{display:block;font:800 13px/1.3 var(--display);letter-spacing:.22em;text-transform:uppercase;color:var(--ink)}
+.ballot-head span{display:block;font-size:12.5px;color:var(--ink-2);margin-top:4px}
+.ballot-party{display:flex;align-items:center;gap:14px;padding:12px;border:1.5px solid var(--ink);border-radius:3px;background:#fff}
+.ballot-party .pn{font:800 26px/1 var(--display);color:var(--ink)}
+.ballot-party .pt{font-size:12.5px;line-height:1.3;color:var(--ink-2)}
+.ballot-party .pt b{display:block;font:800 17px/1.2 var(--display);color:var(--ink);letter-spacing:.02em}
+.xbox{position:relative;width:40px;height:40px;border:2px solid var(--ink);border-radius:2px;flex:none;background:#fff;margin-left:auto}
+.xbox svg{position:absolute;inset:-6px;width:52px;height:52px;fill:none;stroke:#1d3fa3;stroke-width:4.2;stroke-linecap:round}
+.xbox path{stroke-dasharray:40;stroke-dashoffset:40}
+.ballot.shown .xbox path:first-child{animation:draw .35s .35s ease-out forwards}
+.ballot.shown .xbox path:last-child{animation:draw .35s .75s ease-out forwards}
+html:not(.js) .xbox path{stroke-dashoffset:0}
+@keyframes draw{to{stroke-dashoffset:0}}
+.ballot-list{list-style:none;margin:14px 0 0;padding:0 0 0 4px;display:grid;gap:6px}
+.ballot-list li{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--ink-2)}
+.ballot-list li::before{content:"";width:13px;height:13px;border:1.5px solid #9aa2ad;border-radius:2px;flex:none}
+.ballot-list .n{width:16px;text-align:right;color:var(--muted);order:-1}
+.ballot-note{position:absolute;right:12px;bottom:-32px;font-size:12.5px;color:var(--muted)}
+@media (min-width:960px){.vote-grid{grid-template-columns:1.05fr .95fr;gap:88px}}
+
+/* ---------- Závěrečná výzva ---------- */
+.cta-band{background:var(--navy);color:#fff;position:relative;overflow:hidden;isolation:isolate;padding:72px 0}
+.cta-band::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(600px 360px at 90% 120%,rgba(227,180,92,.22),transparent 60%)}
+.cta-grid{display:grid;gap:28px;align-items:center}
+.cta-band .eyebrow{color:var(--gold-bright)}
+.cta-band h2{color:#fff;font-size:clamp(28px,4.6vw,46px);font-weight:800;margin:14px 0 18px}
+.cta-band h2 .accent{color:var(--gold-bright)}
+.cta-band p{color:var(--navy-ink);font-size:18px;max-width:40em}
+.cta-band .regards{margin-top:22px;font-size:15px;color:var(--navy-ink)}
+.cta-band .regards b{display:block;color:#fff;font-family:var(--display);font-size:17px;margin-top:2px}
+.cta-num{display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:22px 26px;justify-self:start}
+.cta-num .n{display:grid;place-items:center;width:84px;height:84px;border-radius:16px;background:var(--gold-bright);color:var(--navy-2);font:800 48px/1 var(--display);flex:none}
+.cta-num b{display:block;font:800 20px/1.2 var(--display);color:#fff}
+.cta-num span{display:block;font-size:15px;color:var(--navy-ink);margin-top:4px}
+@media (min-width:960px){.cta-band{padding:96px 0}.cta-grid{grid-template-columns:1.3fr .7fr;gap:64px}.cta-num{justify-self:end;flex-direction:column;text-align:center;padding:34px 38px}}
+
+/* ---------- Patička ---------- */
+.footer{background:var(--navy-2);color:var(--navy-ink);padding:60px 0 28px;font-size:15px}
+.footer-grid{display:grid;gap:34px}
+.footer .brand-name{color:#fff}
+.footer .brand-sub{color:var(--gold-bright);white-space:normal}
+.footer .brand img{background:#fff;border-radius:10px;padding:4px;width:58px}
+.footer h4{margin:0 0 14px;color:#fff;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.footer a{text-decoration:none;color:var(--navy-ink)}
+.footer a:hover{color:#fff;text-decoration:underline}
+.footer .web{display:inline-flex;align-items:center;gap:8px;color:var(--gold-bright);font:700 17px/1 var(--display)}
+.footer .web .i{width:20px;height:20px}
+.footer-bottom{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:13.5px;color:#93a4bb}
+@media (min-width:860px){.footer-grid{grid-template-columns:1.4fr 1fr 1fr}}
+
+/* ---------- Animace ---------- */
+.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.shown{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+  .bar-fill{width:var(--w)!important}
+  .xbox path{stroke-dashoffset:0!important}
+}
+
+/* ---------- Malé displeje ---------- */
+@media (max-width:480px){
+  :root{--gutter:16px;--header-h:66px}
+  body{font-size:16px}
+  .brand img{width:40px}
+  .brand-name{font-size:20px}
+  .brand-sub{font-size:10.5px}
+  .hero-actions .btn{flex:1 1 100%}
+  .date-chip{flex:1 1 100%}
+  .goal{padding:20px;gap:14px}
+  .goal-icon{width:46px;height:46px}
+  .pullquote{gap:10px}
+  .pullquote .mark{font-size:60px}
+  .team-facts{gap:8px}
+  .team-fact b{font-size:25px}
+  .team-fact span{font-size:10.5px}
+  .ballot{padding:22px 16px 24px}
+  .ballot-party{gap:10px;padding:10px}
+  .ballot-party .pt b{font-size:15px}
+  .cta-num{width:100%}
+}
+@media print{
+  .topbar,.header,.mobile-nav,.hero-actions,.stamp{display:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
 </head>
 <body>
-  <h1>Vítejte na prodily.cz</h1>
-  <p>Web právě vzniká.</p>
+<script>document.documentElement.classList.add('js')</script>
+
+<!-- Ikony (SVG sprite) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-water" viewBox="0 0 24 24"><path d="M12 2.8c-.5 2.4-2 4.5-3.9 6.1C6.3 10.5 5 12.4 5 14.8a7 7 0 0 0 14 0c0-2.4-1.3-4.3-3.1-5.9C14 7.3 12.5 5.2 12 2.8z"/><path d="M8.8 15.2a3.2 3.2 0 0 0 3 3"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-chapel" viewBox="0 0 24 24"><path d="M12 1.5v4"/><path d="M10.2 3.2h3.6"/><path d="M4.5 11 12 5.5l7.5 5.5"/><path d="M6 10v11h12V10"/><path d="M10 21v-4a2 2 0 0 1 4 0v4"/><path d="M2.5 21h19"/></symbol>
+  <symbol id="i-shop" viewBox="0 0 24 24"><path d="M3.5 9 5 4h14l1.5 5"/><path d="M3.5 9a2.8 2.8 0 0 0 5.6 0 2.9 2.9 0 0 0 5.8 0 2.8 2.8 0 0 0 5.6 0"/><path d="M5 11.6V21h14v-9.4"/><path d="M10 21v-5h4v5"/></symbol>
+  <symbol id="i-coins" viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></symbol>
+  <symbol id="i-tractor" viewBox="0 0 24 24"><circle cx="7" cy="16" r="4"/><circle cx="7" cy="16" r="1"/><circle cx="18.5" cy="17.5" r="2.5"/><path d="M11 17h5"/><path d="M4 12.5V5h6l1.8 7"/><path d="M11.8 12H20a1 1 0 0 1 1 1v3"/><path d="M16.5 12V7.5"/></symbol>
+  <symbol id="i-cctv" viewBox="0 0 24 24"><path d="M3.2 8.6 15 4.3a1 1 0 0 1 1.3.6l1.6 4.4a1 1 0 0 1-.6 1.3L5.5 14.9a1 1 0 0 1-1.3-.6L2.6 9.9a1 1 0 0 1 .6-1.3z"/><path d="m17.4 8 3.3-1.2 1 2.8-3.3 1.2"/><path d="M8.5 13.8 10 18H4"/><path d="M4 15.5V21"/></symbol>
+  <symbol id="i-tree" viewBox="0 0 24 24"><path d="M8 19a4 4 0 0 1-2.24-7.32A3.5 3.5 0 0 1 9 6.03V6a3 3 0 1 1 6 0v.04a3.5 3.5 0 0 1 3.24 5.65A4 4 0 0 1 16 19Z"/><path d="M12 19v3"/></symbol>
+  <symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M11.1 7.1a16.55 16.55 0 0 1 10.9 4"/><path d="M12 12a12.6 12.6 0 0 1-8.7 5"/><path d="M16.8 13.6a16.55 16.55 0 0 1-9 7.5"/><path d="M20.7 17a12.8 12.8 0 0 0-8.7-5 13.3 13.3 0 0 1 0-10"/><path d="M6.3 3.8a16.55 16.55 0 0 0 1.9 11.5"/></symbol>
+  <symbol id="i-ear" viewBox="0 0 24 24"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+  <symbol id="i-family" viewBox="0 0 24 24"><circle cx="6.5" cy="5" r="2"/><circle cx="17.5" cy="5" r="2"/><circle cx="12" cy="11" r="1.6"/><path d="M4 21v-6.5L3 11a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2l-1 3.5V21"/><path d="M15 21v-6.5L14 11a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2l-1 3.5V21"/><path d="M10.5 21v-4l-.5-2.5a1.4 1.4 0 0 1 1.4-1.5h1.2a1.4 1.4 0 0 1 1.4 1.5l-.5 2.5v4"/></symbol>
+  <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 17V5H2v12h2.5"/><path d="M14 8h4.2l3.8 4.2V17h-2.5"/><path d="M9.5 17h5"/><circle cx="7" cy="17.5" r="2.5"/><circle cx="17" cy="17.5" r="2.5"/></symbol>
+  <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="m3 11 15-6v14L3 13z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/><path d="M21 9v6"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-id" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="11.5" r="2.2"/><path d="M4.8 16.2a3.4 3.4 0 0 1 6.4 0"/><path d="M14 10h5M14 14h3"/></symbol>
+  <symbol id="i-ballot" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m8 8 8 8M16 8l-8 8"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M4 11h16v10H4z"/><path d="M8 11V4h8v7"/><path d="M8 15h8"/><path d="M11 7l1 1 2-2"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+</svg>
+
+<a class="skip" href="#obsah">Přeskočit na obsah</a>
+
+<div class="topbar">
+  <div class="container">
+    <span>Volby do zastupitelstva obce Díly · <strong>9. a 10. října 2026</strong></span>
+    <span class="countdown"><span class="pulse" aria-hidden="true"></span><span id="countdown-text">Volte sdružení PRO DÍLY č. 1</span></span>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <div class="container">
+    <a class="brand" href="#uvod" aria-label="PRO DÍLY – na začátek stránky">
+      <img src="img/logo-160.jpg" width="160" height="176" alt="Logo sdružení PRO DÍLY">
+      <span class="brand-text">
+        <span class="brand-name">PRO DÍLY</span>
+        <span class="brand-sub">Sdružení nezávislých kandidátů</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Hlavní navigace">
+      <a href="#slovo">O nás</a>
+      <a href="#program">Program</a>
+      <a href="#podarilo-se">Co se podařilo</a>
+      <a href="#kandidati">Kandidáti</a>
+      <a href="#prohlaseni">Prohlášení</a>
+      <a href="#volby">Jak volit</a>
+    </nav>
+    <a class="btn btn-gold btn-sm header-cta" href="#volby">Volte č. 1</a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Otevřít menu">
+      <svg class="i i-open"><use href="#i-menu"/></svg>
+      <svg class="i i-close"><use href="#i-close"/></svg>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobilní navigace">
+  <a href="#slovo">O nás <svg class="i"><use href="#i-arrow"/></svg></a>
+  <a href="#program">Náš program <svg class="i"><use href="#i-arrow"/></svg></a>
+  <a href="#podarilo-se">Co se nám podařilo <svg class="i"><use href="#i-arrow"/></svg></a>
+  <a href="#kandidati">Kandidáti <svg class="i"><use href="#i-arrow"/></svg></a>
+  <a href="#prohlaseni">Prohlášení <svg class="i"><use href="#i-arrow"/></svg></a>
+  <a href="#volby">Jak volit <svg class="i"><use href="#i-arrow"/></svg></a>
+  <a class="btn btn-gold" href="#volby">Volte PRO DÍLY č. 1</a>
+</nav>
+
+<main id="obsah">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="uvod">
+  <div class="hero-grid">
+    <div class="hero-photo">
+      <img src="img/tym-vyhlidka-1200.jpg"
+           srcset="img/tym-vyhlidka-900.jpg 900w, img/tym-vyhlidka-1200.jpg 1200w, img/tym-vyhlidka-1600.jpg 1600w"
+           sizes="(min-width: 1100px) 58vw, 100vw"
+           width="1600" height="1038" fetchpriority="high"
+           alt="Devět kandidátů sdružení PRO DÍLY na vyhlídce s výhledem do krajiny">
+      <svg class="stamp" viewBox="0 0 200 200" role="img" aria-label="Volte PRO DÍLY, číslo 1">
+        <defs><path id="stamp-circle" d="M100 100m-73 0a73 73 0 1 1 146 0a73 73 0 1 1-146 0"/></defs>
+        <circle cx="100" cy="100" r="97" fill="#e3b45c"/>
+        <circle cx="100" cy="100" r="90" fill="none" stroke="#14284b" stroke-width="2"/>
+        <g class="ring">
+          <text fill="#14284b" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="19" letter-spacing="2">
+            <textPath href="#stamp-circle" textLength="452" lengthAdjust="spacing">VOLTE PRO DÍLY • ČÍSLO 1 • VOLTE PRO DÍLY • ČÍSLO 1 •</textPath>
+          </text>
+        </g>
+        <circle cx="100" cy="100" r="52" fill="#14284b"/>
+        <text x="100" y="84" text-anchor="middle" fill="#e3b45c" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="15" letter-spacing="1">Č.</text>
+        <text x="100" y="128" text-anchor="middle" fill="#ffffff" font-family="Montserrat, Arial, sans-serif" font-weight="800" font-size="54">1</text>
+      </svg>
+    </div>
+    <div class="hero-text">
+      <span class="eyebrow">PRO DÍLY<span class="sep">·</span>Komunální volby 2026</span>
+      <h1>Zkusme to společně <span class="accent">trochu jinak.</span></h1>
+      <p class="lead">Jsme <strong>Sdružení nezávislých kandidátů „PRO&nbsp;DÍLY“</strong>. Přijďte k&nbsp;volbám, zvolte si své zástupce do vedení obce a&nbsp;podpořte nás svým hlasem. Jde nám o&nbsp;Díly a&nbsp;společné soužití.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#program">Náš program <svg class="i"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-outline-light" href="#kandidati">Naši kandidáti</a>
+      </div>
+      <div class="hero-dates">
+        <div class="date-chip"><svg class="i"><use href="#i-calendar"/></svg><div><b>Pátek 9. října</b><span>14:00 – 22:00</span></div></div>
+        <div class="date-chip"><svg class="i"><use href="#i-calendar"/></svg><div><b>Sobota 10. října</b><span>8:00 – 14:00</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAKTA ============ -->
+<div class="facts">
+  <ul class="facts-grid container" aria-label="Základní informace">
+    <li><b>9.–10. 10.</b><span>termín voleb 2026</span></li>
+    <li><b>č. 1</b><span>na hlasovacím lístku</span></li>
+    <li><b>9</b><span>nezávislých kandidátů</span></li>
+    <li><b>10</b><span>témat programu</span></li>
+  </ul>
+</div>
+
+<!-- ============ O NÁS / ÚVODNÍ SLOVO ============ -->
+<section class="section" id="slovo">
+  <div class="container">
+    <div class="split-head reveal">
+      <div>
+        <span class="eyebrow">PRO DÍLY<span class="sep">·</span>O nás</span>
+        <h2>Vážení spoluobčané,</h2>
+      </div>
+      <p class="lead-r">dne 9. a&nbsp;10. října 2026 nás čekají volby do zastupitelstva naší obce, a&nbsp;proto si vás dovolujeme oslovit.</p>
+    </div>
+    <div class="cols reveal">
+      <div>
+        <p>Abychom mohli po volbách nahlas promluvit do nového obsazení vedení obce, přijďte k&nbsp;volbám a&nbsp;podpořte nás svým hlasem.</p>
+        <p>Vyjádřete svůj názor, kam by se měla naše obec v&nbsp;budoucnu ubírat a&nbsp;na jaká témata se zaměřit. V&nbsp;předvolebním období letošního roku jsme společně vytvořili stávajícímu vedení obce zdravou konkurenci, což je pro dnešní dobu velice důležité.</p>
+      </div>
+      <div>
+        <p>Slovo jedné strany ve vedení obce, které v&nbsp;Dílech máme již několik volebních období, určitě nepřináší posun v&nbsp;názorech, jednáních a&nbsp;především v&nbsp;rozvoji naší obce.</p>
+        <p>Proto kandidujeme jako <strong>sdružení nezávislých kandidátů</strong> – bez politické příslušnosti, s&nbsp;jediným zájmem: aby se v&nbsp;Dílech dobře žilo všem.</p>
+      </div>
+    </div>
+    <figure class="pullquote reveal">
+      <span class="mark" aria-hidden="true">„</span>
+      <div>
+        <p><b>Přijďte všichni k&nbsp;volbám a&nbsp;zvolte si své zástupce do vedení obce.</b> Zkusme to společně <span class="accent">trochu jinak.</span></p>
+        <footer>Sdružení nezávislých kandidátů „PRO&nbsp;DÍLY“</footer>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ HODNOTY ============ -->
+<section class="section tint" aria-labelledby="hodnoty-title">
+  <div class="container values-grid">
+    <div class="reveal">
+      <div class="logo-card">
+        <img src="img/logo-480.jpg" width="480" height="528" loading="lazy" decoding="async"
+             alt="Logo PRO DÍLY – spojené ruce se srdcem „Pro společný domov Pro Díly“ a hodnotami sdružení">
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Naše hodnoty</span>
+      <h2 id="hodnoty-title">Pro společný domov – Pro&nbsp;Díly</h2>
+      <ul class="values">
+        <li class="value"><span class="num">01</span><div><h3>Rozvoj sportu</h3><p>Multifunkční hřiště s&nbsp;umělým povrchem v&nbsp;prostoru bývalých tenisových kurtů.</p></div><svg class="i"><use href="#i-ball"/></svg></li>
+        <li class="value"><span class="num">02</span><div><h3>Kultura a setkávání</h3><p>Podpora kulturních, sportovních a&nbsp;společenských akcí v&nbsp;obci.</p></div><svg class="i"><use href="#i-music"/></svg></li>
+        <li class="value"><span class="num">03</span><div><h3>Podpora hasičů a spolků</h3><p>Transparentní podpora všech činných složek a&nbsp;rovné podmínky pro jejich rozvoj.</p></div><svg class="i"><use href="#i-flame"/></svg></li>
+        <li class="value"><span class="num">04</span><div><h3>Rodiny, děti a senioři</h3><p>Bezpečná, čistá a&nbsp;celoročně udržovaná obec pro všechny generace.</p></div><svg class="i"><use href="#i-family"/></svg></li>
+        <li class="value"><span class="num">05</span><div><h3>Naslouchání občanům</h3><p>Průzkum mezi občany, kniha přání a&nbsp;stížností a&nbsp;otevřená komunikace s&nbsp;vámi všemi.</p></div><svg class="i"><use href="#i-ear"/></svg></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROGRAM ============ -->
+<section class="section" id="program">
+  <div class="container">
+    <div class="split-head reveal">
+      <div>
+        <span class="eyebrow">PRO DÍLY<span class="sep">·</span>Program</span>
+        <h2>Co chceme udělat</h2>
+      </div>
+      <p class="lead-r">Naše sdružení se s&nbsp;podporou vás, občanů, chce v&nbsp;počátku zabývat těmito tématy.</p>
+    </div>
+
+    <div class="program-grid">
+      <article class="goal reveal">
+        <div class="goal-icon"><svg class="i"><use href="#i-water"/></svg></div>
+        <div><span class="num">01</span><h3>Pitná voda</h3>
+        <p>Zajistit revizi čistoty pitné vody a&nbsp;její pravidelnou údržbu. Vyhodnotit platnou smlouvu s&nbsp;firmou CHVAK a.s. Domažlice, která by měla zajišťovat pravidelnou údržbu vodovodního řadu naší obce.</p></div>
+      </article>
+      <article class="goal reveal">
+        <div class="goal-icon"><svg class="i"><use href="#i-users"/></svg></div>
+        <div><span class="num">02</span><h3>Spolky a kultura</h3>
+        <p>Transparentně podporovat finančně i&nbsp;materiálně všechny současné činné složky, vytvořit jim rovné podmínky pro jejich další rozvoj a&nbsp;reprezentaci naší obce.</p></div>
+      </article>
+      <article class="goal reveal">
+        <div class="goal-icon"><svg class="i"><use href="#i-chapel"/></svg></div>
+        <div><span class="num">03</span><h3>Památky</h3>
+        <p>Zajistit opravu fasády místní kapličky Cyrila a&nbsp;Metoděje – symbolu Dílů v&nbsp;centru obce, která v&nbsp;roce 2027 oslaví úctyhodných 80&nbsp;let.</p></div>
+      </article>
+      <article class="goal reveal">
+        <div class="goal-icon"><svg class="i"><use href="#i-shop"/></svg></div>
+        <div><span class="num">04</span><h3>Místní služby</h3>
+        <p>Zachovat fungování místního obchodu a&nbsp;hostince (klubu Tyrolka), podporovat a&nbsp;podílet se na pořádání kulturních, sportovních a&nbsp;společenských akcí.</p></div>
+      </article>
+      <article class="goal reveal">
+        <div class="goal-icon"><svg class="i"><use href="#i-coins"/></svg></div>
+        <div><span class="num">05</span><h3>Dotace a finance</h3>
+        <p>Provést vnitřní audity dotačních akcí, které jsou schválené nebo se plánují.</p></div>
+      </article>
+      <article class="goal reveal">
+        <div class="goal-icon"><svg class="i"><use href="#i-tractor"/></svg></div>
+        <div><span class="num">06</span><h3>Obecní technika</h3>
+        <p>Efektivně a&nbsp;transparentně vyhodnocovat využívání a&nbsp;náklady na obecní techniku.</p></div>
+      </article>
+      <article class="goal reveal">
+        <div class="goal-icon"><svg class="i"><use href="#i-cctv"/></svg></div>
+        <div><span class="num">07</span><h3>Bezpečnost</h3>
+        <p>Zajistit do budoucna bezpečnost v&nbsp;naší obci – na základě ankety zvážit instalaci kamer na klíčová místa (příjezdové cesty, centrum, kontejnery).</p></div>
+      </article>
+      <article class="goal reveal">
+        <div class="goal-icon"><svg class="i"><use href="#i-tree"/></svg></div>
+        <div><span class="num">08</span><h3>Čistota a zeleň</h3>
+        <p>Přemístit velkoobjemové kontejnery na odpad z&nbsp;hřiště mimo centrum obce, starat se o&nbsp;zeleň i&nbsp;mimo centrum a&nbsp;v&nbsp;zimě zajistit a&nbsp;garantovat provozuschopnost a&nbsp;údržbu všech ulic v&nbsp;obci.</p></div>
+      </article>
+      <article class="goal reveal">
+        <div class="goal-icon"><svg class="i"><use href="#i-ball"/></svg></div>
+        <div><span class="num">09</span><h3>Sport</h3>
+        <p>Zaměřit se na dotační program pro vybudování umělého bezúdržbového multifunkčního hřiště v&nbsp;prostoru bývalých tenisových kurtů.</p></div>
+      </article>
+      <article class="goal reveal">
+        <div class="goal-icon"><svg class="i"><use href="#i-ear"/></svg></div>
+        <div><span class="num">10</span><h3>Spolupráce s občany</h3>
+        <p>Provést průzkum mezi občany ke zkvalitnění služeb, zavést knihu přání a&nbsp;stížností a&nbsp;naslouchat vám všem.</p></div>
+      </article>
+    </div>
+
+    <div class="assure reveal">
+      <div class="assure-icon"><svg class="i"><use href="#i-shop"/></svg></div>
+      <div>
+        <span class="eyebrow">Uvádíme na pravou míru</span>
+        <h3>Hostinec Tyrolka i&nbsp;místní obchod chceme zachovat</h3>
+        <p>Všechny občany Dílů chceme ujistit, že na rozdíl od toho, co se po obci chybně říká, v&nbsp;žádném případě nechceme uzavírat současný hostinec Tyrolka ani místní obchod potravin. Naopak – chceme se zasadit o&nbsp;to, aby všechny tyto služby v&nbsp;naší obci fungovaly pro občany Dílů i&nbsp;širokou veřejnost na potřebné úrovni dnešní doby, ale zároveň transparentně a&nbsp;účelně.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KAPLIČKA ============ -->
+<section class="section tint chapel" aria-labelledby="chapel-title">
+  <div class="container chapel-grid">
+    <div class="chapel-art reveal">
+      <div class="frame">
+        <img src="img/kaplicka-kresba.jpg" width="560" height="649" loading="lazy" decoding="async"
+             alt="Kresba kapličky Cyrila a Metoděje v Dílech">
+      </div>
+      <div class="badge80" aria-hidden="true"><div><b>80</b><span>let v roce<br>2027</span></div></div>
+    </div>
+    <div class="text reveal">
+      <span class="eyebrow">Program<span class="sep">·</span>Památky</span>
+      <h2 id="chapel-title">Kaplička Cyrila a&nbsp;Metoděje – symbol Dílů</h2>
+      <p style="margin-top:20px">Kaplička v&nbsp;centru obce je symbolem Dílů. V&nbsp;roce 2027 oslaví úctyhodných 80&nbsp;let – a&nbsp;zaslouží si, aby k&nbsp;tomuto výročí vypadala důstojně.</p>
+      <p>Chceme proto zajistit <strong>opravu její fasády</strong>, aby i&nbsp;nadále zdobila centrum obce a&nbsp;připomínala, že Díly jsou náš společný domov.</p>
+      <div class="fact-row">
+        <div class="fact"><b>1947</b><span>rok vzniku</span></div>
+        <div class="fact"><b>80 let</b><span>výročí v&nbsp;roce 2027</span></div>
+        <div class="fact"><b>Fasáda</b><span>naším cílem je oprava</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CO SE PODAŘILO ============ -->
+<section class="section results" id="podarilo-se">
+  <div class="container">
+    <div class="split-head reveal">
+      <div>
+        <span class="eyebrow">PRO DÍLY<span class="sep">·</span>Výsledky</span>
+        <h2>Co už se nám podařilo prosadit</h2>
+      </div>
+      <p class="lead-r">Co se nám – jednotlivcům i&nbsp;novému sdružení „PRO&nbsp;DÍLY“ – za krátké období podařilo.</p>
+    </div>
+
+    <div class="stat-panel reveal">
+      <div class="stat-hero">
+        <b>3×</b>
+        <span>vyšší účast občanů na veřejném zasedání zastupitelstva – během pouhých čtyř měsíců.</span>
+      </div>
+      <div class="bars" id="bars" role="img" aria-label="Účast občanů na veřejném zasedání zastupitelstva v roce 2026: květen 16, červen 33, září přes 50.">
+        <div class="bars-title" aria-hidden="true">Účast na zasedání zastupitelstva 2026</div>
+        <div class="bar-row" aria-hidden="true" title="Květen 2026: 16 občanů"><span class="lbl">Květen</span><div class="bar-track"><div class="bar-fill" style="--w:29%"></div></div><span class="val">16</span></div>
+        <div class="bar-row" aria-hidden="true" title="Červen 2026: 33 občanů"><span class="lbl">Červen</span><div class="bar-track"><div class="bar-fill" style="--w:60%"></div></div><span class="val">33</span></div>
+        <div class="bar-row" aria-hidden="true" title="Září 2026: přes 50 občanů"><span class="lbl">Září</span><div class="bar-track"><div class="bar-fill" style="--w:91%"></div></div><span class="val">50+</span></div>
+        <div class="bars-note" aria-hidden="true">Počet přítomných občanů</div>
+      </div>
+    </div>
+
+    <div class="results-grid">
+      <article class="result reveal">
+        <div class="result-top"><div class="result-icon"><svg class="i"><use href="#i-water"/></svg></div><h3>Voda</h3></div>
+        <p>Na posledních jednáních veřejného zastupitelstva se nám s&nbsp;podporou vás – občanů – podařilo upozornit vedení obce na přetrvávající stížnosti na kvalitu vody a&nbsp;neuspokojivý přístup ze strany vedení obce a&nbsp;firmy CHVAK a.s. Domažlice.</p>
+      </article>
+      <article class="result reveal">
+        <div class="result-top"><div class="result-icon"><svg class="i"><use href="#i-megaphone"/></svg></div><h3>Zájem</h3></div>
+        <p>Vytvoření zdravé konkurence a&nbsp;naše aktivita vzbudily veřejný zájem o&nbsp;dění v&nbsp;obci. Účast na veřejném zasedání zastupitelstva stoupla z&nbsp;16 občanů v&nbsp;květnu na 33 v&nbsp;červnu a&nbsp;na více než 50 občanů v&nbsp;září 2026.</p>
+      </article>
+      <article class="result reveal">
+        <div class="result-top"><div class="result-icon"><svg class="i"><use href="#i-coins"/></svg></div><h3>Hospodaření</h3></div>
+        <p>Upozornili jsme vedení obce na netransparentně řízený KLUB TYROLKA a&nbsp;jeho hospodaření (od května 2026 má dle sjednané smlouvy o&nbsp;nájmu nového provozovatele).</p>
+      </article>
+      <article class="result reveal">
+        <div class="result-top"><div class="result-icon"><svg class="i"><use href="#i-truck"/></svg></div><h3>Pořádek</h3></div>
+        <p>Naším upozorněním se podařilo odstranit dlouhodobě parkující dodávkové vozidlo „vrak“ z&nbsp;obecního pozemku. Vyzvali jsme také vedení obce k&nbsp;řešení nevhodného umístění velkoobjemových kontejnerů a&nbsp;techniky (valníku) v&nbsp;centru obce – na hřišti.</p>
+      </article>
+      <article class="result reveal">
+        <div class="result-top"><div class="result-icon"><svg class="i"><use href="#i-ball"/></svg></div><h3>Hřiště</h3></div>
+        <p>Vyzvali jsme vedení obce k&nbsp;přehodnocení záměru vybudovat fotbalové mini hřiště v&nbsp;prostoru bývalých tenisových kurtů. Na tomto místě by mělo vzniknout spíše víceúčelové hřiště pro všechny druhy sportů s&nbsp;umělým bezúdržbovým povrchem, jako je to v&nbsp;sousedních obcích.</p>
+      </article>
+      <article class="result reveal">
+        <div class="result-top"><div class="result-icon"><svg class="i"><use href="#i-clipboard"/></svg></div><h3>Kontrola</h3></div>
+        <p>Po našem dotazu na využívání obecní techniky (zejména traktorů a&nbsp;valníků určených k&nbsp;údržbě obecních pozemků a&nbsp;veřejných prostor) se snížila četnost jejich užívání a&nbsp;upravila se evidence využívání (kniha jízd apod.).</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KANDIDÁTI ============ -->
+<section class="section" id="kandidati">
+  <div class="container">
+    <div class="team-grid">
+      <figure class="reveal">
+        <div class="team-photo">
+          <img src="img/tym-kaplicka-1200.jpg"
+               srcset="img/tym-kaplicka-700.jpg 700w, img/tym-kaplicka-1200.jpg 1200w"
+               sizes="(min-width: 1180px) 600px, (min-width: 980px) 52vw, 100vw"
+               width="1200" height="1020" loading="lazy" decoding="async"
+               alt="Kandidáti sdružení PRO DÍLY před kapličkou Cyrila a Metoděje">
+        </div>
+        <figcaption><svg class="i"><use href="#i-pin"/></svg>Naši kandidáti u&nbsp;kapličky Cyrila a&nbsp;Metoděje v&nbsp;Dílech</figcaption>
+      </figure>
+      <div class="text reveal">
+        <span class="eyebrow">PRO DÍLY<span class="sep">·</span>Naši lidé</span>
+        <h2>Naši kandidáti</h2>
+        <p style="margin-top:20px">Devět lidí z&nbsp;různých profesí, které spojuje jedno – chceme, aby se v&nbsp;Dílech dobře žilo všem. Nejsme členy žádné politické strany a&nbsp;do vedení obce chceme přinést otevřenost, kontrolu a&nbsp;naslouchání.</p>
+        <div class="team-facts">
+          <div class="team-fact"><b>9</b><span>kandidátů</span></div>
+          <div class="team-fact"><b>0</b><span>politických stran</span></div>
+          <div class="team-fact"><b>č. 1</b><span>na lístku</span></div>
+        </div>
+      </div>
+    </div>
+
+    <ol class="candidates" aria-label="Seznam kandidátů">
+      <li class="cand reveal"><span class="big" aria-hidden="true">1</span><span class="pos">Č. 1</span><h3>Mgr. Petr Kuneš</h3><div class="role">55 let · strážník Městské policie</div><span class="tag">bez politické příslušnosti</span></li>
+      <li class="cand reveal"><span class="big" aria-hidden="true">2</span><span class="pos">Č. 2</span><h3>Magdaléna Sokolová</h3><div class="role">44 let · asistentka auditorka</div><span class="tag">bez politické příslušnosti</span></li>
+      <li class="cand reveal"><span class="big" aria-hidden="true">3</span><span class="pos">Č. 3</span><h3>Stanislav Krutina</h3><div class="role">46 let · OSVČ</div><span class="tag">bez politické příslušnosti</span></li>
+      <li class="cand reveal"><span class="big" aria-hidden="true">4</span><span class="pos">Č. 4</span><h3>Pavel Řezníček</h3><div class="role">39 let · OSVČ</div><span class="tag">bez politické příslušnosti</span></li>
+      <li class="cand reveal"><span class="big" aria-hidden="true">5</span><span class="pos">Č. 5</span><h3>Radek Volfík</h3><div class="role">51 let · technik</div><span class="tag">bez politické příslušnosti</span></li>
+      <li class="cand reveal"><span class="big" aria-hidden="true">6</span><span class="pos">Č. 6</span><h3>Petra Šafaříková</h3><div class="role">49 let · učitelka v MŠ</div><span class="tag">bez politické příslušnosti</span></li>
+      <li class="cand reveal"><span class="big" aria-hidden="true">7</span><span class="pos">Č. 7</span><h3>Petr Řezníček</h3><div class="role">37 let · OSVČ</div><span class="tag">bez politické příslušnosti</span></li>
+      <li class="cand reveal"><span class="big" aria-hidden="true">8</span><span class="pos">Č. 8</span><h3>Luboš Reiniger</h3><div class="role">52 let · technik</div><span class="tag">bez politické příslušnosti</span></li>
+      <li class="cand reveal"><span class="big" aria-hidden="true">9</span><span class="pos">Č. 9</span><h3>Jan Vargovčík</h3><div class="role">49 let · vedoucí dopravy</div><span class="tag">bez politické příslušnosti</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ PROHLÁŠENÍ ============ -->
+<section class="section tint" id="prohlaseni">
+  <div class="container">
+    <article class="statement-card reveal">
+      <div class="kicker">Prohlášení</div>
+      <h2>Stojíme o&nbsp;slušný a&nbsp;věcný dialog</h2>
+      <p class="sub">Sdružení nezávislých kandidátů „PRO&nbsp;DÍLY“</p>
+      <p class="salute">Vážení spoluobčané obce Díly,</p>
+      <p>tímto se chceme jednoznačně ohradit proti lživým obviněním a&nbsp;hrubým urážkám, že naše Sdružení nezávislých kandidátů „PRO&nbsp;DÍLY“ č.&nbsp;1 mělo zorganizovat kontrolu živnostenského úřadu v&nbsp;hostinci TYROLKA. Jak se následně úředně potvrdilo, jednalo se o&nbsp;běžnou, dlouhodobě plánovanou kontrolu nového podniku, kterou úřad provedl ze své úřední povinnosti.</p>
+      <p>Ještě tentýž den jsme svolali osobní jednání se starostou a&nbsp;ostatními členy Sdružení nezávislých kandidátů č.&nbsp;2, abychom situaci řešili. Na jednání se dostavil pouze starosta a&nbsp;podle jeho vyjádření jednal za celé své sdružení (č.&nbsp;2).</p>
+      <p>Hrubé urážky a&nbsp;nařčení ze strany některých občanů a&nbsp;zástupců Sdružení nezávislých kandidátů (č.&nbsp;2) jednoznačně odsuzujeme a&nbsp;takové jednání je pro nás zcela nepřijatelné. Ostrá slova a&nbsp;útoky, které se objevily, nás velice mrzí a&nbsp;věříme, že do naší obce nepatří. Stojíme o&nbsp;slušný a&nbsp;věcný dialog o&nbsp;tématech, která vás, občany Dílů, skutečně zajímají.</p>
+      <p>Přejeme si, aby nadcházející předvolební období bylo pro obě kandidující sdružení rovnocenné, transparentní a&nbsp;férové.</p>
+      <div class="statement-sign">
+        <b>Za Sdružení nezávislých kandidátů „PRO&nbsp;DÍLY“</b>
+        Mgr. Petr Kuneš, Magdaléna Sokolová, Stanislav Krutina, Pavel Řezníček, Radek Volfík, Petra Šafaříková, Petr Řezníček, Luboš Reiniger a&nbsp;Jan Vargovčík
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ JAK VOLIT ============ -->
+<section class="section" id="volby">
+  <div class="container vote-grid">
+    <div class="text reveal">
+      <span class="eyebrow">PRO DÍLY<span class="sep">·</span>Jak volit</span>
+      <h2>Volte „PRO&nbsp;DÍLY“ č.&nbsp;1 jedním křížkem</h2>
+      <p style="margin-top:20px">Volby do zastupitelstva obce Díly proběhnou v&nbsp;pátek a&nbsp;v&nbsp;sobotu 9. a&nbsp;10. října 2026. Stačí jeden křížek u&nbsp;našeho sdružení.</p>
+      <ol class="steps">
+        <li class="step"><div class="step-icon"><svg class="i"><use href="#i-clock"/></svg></div><div><b>Přijďte k volbám</b><span>Pátek 9. 10. od 14:00 do 22:00 nebo sobota 10. 10. od 8:00 do 14:00.</span></div></li>
+        <li class="step"><div class="step-icon"><svg class="i"><use href="#i-id"/></svg></div><div><b>Vezměte si doklad totožnosti</b><span>Platný občanský průkaz nebo cestovní pas.</span></div></li>
+        <li class="step"><div class="step-icon"><svg class="i"><use href="#i-ballot"/></svg></div><div><b>Zakřížkujte sdružení č. 1</b><span>Na hlasovacím lístku označte křížkem rámeček u&nbsp;názvu Sdružení nezávislých kandidátů „PRO&nbsp;DÍLY“.</span></div></li>
+        <li class="step"><div class="step-icon"><svg class="i"><use href="#i-box"/></svg></div><div><b>Vhoďte lístek do schránky</b><span>Hlasovací lístek vložte do úřední obálky a&nbsp;obálku do volební schránky.</span></div></li>
+      </ol>
+    </div>
+    <div class="ballot-wrap reveal">
+      <div class="ballot" id="ballot" role="img" aria-label="Ilustrační ukázka hlasovacího lístku se zakřížkovaným sdružením PRO DÍLY číslo 1">
+        <div class="ballot-head" aria-hidden="true">
+          <b>Hlasovací lístek</b>
+          <span>pro volby do zastupitelstva obce Díly · 9.–10. 10. 2026</span>
+        </div>
+        <div class="ballot-party" aria-hidden="true">
+          <span class="pn">1</span>
+          <span class="pt"><b>„PRO DÍLY“</b>Sdružení nezávislých kandidátů</span>
+          <span class="xbox"><svg viewBox="0 0 52 52"><path d="M13 13 39 39"/><path d="M39 13 13 39"/></svg></span>
+        </div>
+        <ul class="ballot-list" aria-hidden="true">
+          <li><span class="n">1.</span>Mgr. Petr Kuneš</li>
+          <li><span class="n">2.</span>Magdaléna Sokolová</li>
+          <li><span class="n">3.</span>Stanislav Krutina</li>
+          <li><span class="n">4.</span>Pavel Řezníček</li>
+          <li><span class="n">5.</span>Radek Volfík</li>
+          <li><span class="n">6.</span>Petra Šafaříková</li>
+          <li><span class="n">7.</span>Petr Řezníček</li>
+          <li><span class="n">8.</span>Luboš Reiniger</li>
+          <li><span class="n">9.</span>Jan Vargovčík</li>
+        </ul>
+        <div class="ballot-note" aria-hidden="true">Ilustrační ukázka</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ZÁVĚR ============ -->
+<section class="cta-band" aria-labelledby="cta-title">
+  <div class="container cta-grid">
+    <div class="reveal">
+      <span class="eyebrow">Občané Dílů, přidejte se</span>
+      <h2 id="cta-title">Pojďme to zkusit společně <span class="accent">trochu jinak.</span></h2>
+      <p>Podpořte nás – jde nám o&nbsp;Díly a&nbsp;společné soužití. Za každý váš hlas pro naše sdružení vám předem všichni děkujeme a&nbsp;těšíme se na budoucí spolupráci.</p>
+      <div class="regards">S pozdravem<b>členové Sdružení nezávislých kandidátů „PRO&nbsp;DÍLY“</b></div>
+    </div>
+    <div class="cta-num reveal">
+      <div class="n" aria-hidden="true">1</div>
+      <div><b>Volte PRO DÍLY č. 1</b><span>jedním křížkem<br>9. a 10. října 2026</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#uvod">
+          <img src="img/logo-160.jpg" width="160" height="176" alt="" loading="lazy">
+          <span class="brand-text"><span class="brand-name">PRO DÍLY</span><span class="brand-sub">Sdružení nezávislých kandidátů</span></span>
+        </a>
+        <p style="margin-top:20px;max-width:28em">Pro společný domov – Pro Díly. Volby do zastupitelstva obce Díly 9. a&nbsp;10. října 2026.</p>
+      </div>
+      <div>
+        <h4>Obsah</h4>
+        <ul>
+          <li><a href="#slovo">O nás</a></li>
+          <li><a href="#program">Náš program</a></li>
+          <li><a href="#podarilo-se">Co se nám podařilo</a></li>
+          <li><a href="#kandidati">Kandidáti</a></li>
+          <li><a href="#prohlaseni">Prohlášení</a></li>
+          <li><a href="#volby">Jak volit</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Najdete nás</h4>
+        <a class="web" href="https://www.prodily.cz"><svg class="i"><use href="#i-globe"/></svg>www.prodily.cz</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Zadavatel a zpracovatel: Sdružení nezávislých kandidátů „PRO&nbsp;DÍLY“</span>
+      <span><script type="text/javascript" src="https://counter.websiteout.com/js/35/6/0/0"></script></span>
+      <span>© 2026 PRO DÍLY</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+
+  // Mobilní menu
+  var btn=document.getElementById('menu-btn'), mnav=document.getElementById('mobile-nav');
+  function setMenu(open){
+    root.classList.toggle('menu-open',open);
+    btn.setAttribute('aria-expanded',open?'true':'false');
+    btn.setAttribute('aria-label',open?'Zavřít menu':'Otevřít menu');
+  }
+  btn.addEventListener('click',function(){setMenu(!root.classList.contains('menu-open'))});
+  mnav.addEventListener('click',function(e){if(e.target.closest('a'))setMenu(false)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+  window.addEventListener('resize',function(){if(window.innerWidth>=1080)setMenu(false)});
+
+  // Stín hlavičky při scrollu
+  var header=document.getElementById('header');
+  function onScroll(){header.classList.toggle('scrolled',window.scrollY>8)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // Odpočet do voleb
+  var start=new Date('2026-10-09T14:00:00+02:00'), end=new Date('2026-10-10T14:00:00+02:00');
+  var el=document.getElementById('countdown-text');
+  function plural(n,one,few,many){return n===1?one:(n>=2&&n<=4?few:many)}
+  function tick(){
+    var now=new Date(), ms=start-now;
+    if(now>=end){el.textContent='Děkujeme všem, kdo přišli k volbám';return}
+    if(ms<=0){el.textContent='Volby právě probíhají – volte PRO DÍLY č. 1';return}
+    var d=Math.floor(ms/864e5), h=Math.floor(ms%864e5/36e5);
+    el.textContent=d>0
+      ? 'Do voleb zbývá '+d+' '+plural(d,'den','dny','dní')
+      : 'Volby začínají za '+h+' '+plural(h,'hodinu','hodiny','hodin');
+  }
+  tick();setInterval(tick,60000);
+
+  // Postupné zobrazování obsahu
+  var items=document.querySelectorAll('.reveal, #bars, #ballot');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('shown');io.unobserve(en.target)}});
+    },{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    items.forEach(function(it){io.observe(it)});
+  }else{items.forEach(function(it){it.classList.add('shown')})}
+
+  // Zvýraznění aktivní položky menu
+  var links=document.querySelectorAll('.nav a'), map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){links.forEach(function(a){a.classList.remove('active')});if(map[en.target.id])map[en.target.id].classList.add('active')}
+      });
+    },{rootMargin:'-45% 0px -50% 0px'});
+    Object.keys(map).forEach(function(id){var s=document.getElementById(id);if(s)so.observe(s)});
+  }
+})();
+</script>
 </body>
 </html>
